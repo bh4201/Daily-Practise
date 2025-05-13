@@ -1,0 +1,72 @@
+Method 1: Using a for loop
+
+public class ReverseString {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        String reversed = "";
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+            reversed += str.charAt(i);
+        }
+
+        System.out.println("Reversed String: " + reversed);
+    }
+}
+Method 2: Using StringBuilder
+
+Edit
+public class ReverseString {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        StringBuilder sb = new StringBuilder(str);
+        sb.reverse();
+        System.out.println("Reversed String: " + sb.toString());
+    }
+}
+Method 3: Using Recursion
+
+public class ReverseString {
+    public static String reverse(String str) {
+        if (str.isEmpty()) {
+            return str;
+        }
+        return reverse(str.substring(1)) + str.charAt(0);
+    }
+
+    public static void main(String[] args) {
+        String str = "Hello World";
+        System.out.println("Reversed String: " + reverse(str));
+    }
+}
+Would you like an explanation for any of these methods?
+
+
+
+
+
+
+
+You said:
+another way
+
+
+ChatGPT said:
+Sure! Here's another way to reverse a string in Java using character array:
+
+Method 4: Using Character Array
+java
+Copy
+Edit
+public class ReverseString {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        char[] chars = str.toCharArray();
+        String reversed = "";
+
+        for (int i = chars.length - 1; i >= 0; i--) {
+            reversed += chars[i];
+        }
+
+        System.out.println("Reversed String: " + reversed);
+    }
+}
